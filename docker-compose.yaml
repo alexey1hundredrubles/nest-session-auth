@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  nest-auth-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nest-auth-api
+    container_name: nest-auth-api
+    depends_on: ["mongodb"]
+    environment:
+      - MONGO=mongodb://mongodb:27017/test
+    ports: 
+      - 3000:3000
+    networks:
+      - auth-service-network
+  mongodb:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    networks:
+      - auth-service-network
+networks:
+  auth-service-network:
+    name: auth-service-network
+    driver: bridge

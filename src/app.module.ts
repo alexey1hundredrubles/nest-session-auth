@@ -10,7 +10,7 @@ import { AuthGuard } from './auth/auth.guard';
   imports: [
     AuthModule,
     UsersModule,
-    MongooseModule.forRoot('mongodb://localhost/test'),
+    MongooseModule.forRoot(process.env['MONGO'] || 'mongodb://localhost/test'),
     SessionModule,
   ],
   providers: [
