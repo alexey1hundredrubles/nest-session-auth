@@ -22,7 +22,7 @@ Body:
 ```json
 {
     "login": "login123", 
-	"password": "password123"
+    "password": "password123"
 }
 ```
 Response:
