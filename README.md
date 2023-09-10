@@ -8,8 +8,8 @@ docker-compose up
 
 #### API:
 #### Sign up
-**POST https://localhost:3000/auth/sign-up**
-Body
+**POST https://localhost:3000/auth/sign-up**<br>
+Body:
 ```json
 {
     "login": "login123",
@@ -17,7 +17,7 @@ Body
 }
 ```
 #### Sign in
-**POST https://localhost:3000/auth/sign-in**
+**POST https://localhost:3000/auth/sign-in**<br>
 Body:
 ```json
 {
@@ -37,8 +37,8 @@ Authorization: Bearer ca429b69-9fee-4795-8eee-9621759bf0f1
 **POST https://localhost:3000/auth/sign-out**
 
 #### Get my session(if exists)
-**GET https://localhost:3000/session/me**
-Response
+**GET https://localhost:3000/session/me**<br>
+Response:
 ```json
 {
     "_id": "64fd98de02cb9105d268ada2",
